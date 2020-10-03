@@ -1,0 +1,108 @@
+/* Created by Francisco Caballero 09.28.2020 */
+
+//CSS Best practices
+// Box (position, display, width, margin, etc.)
+// Text 
+// Background 
+// Border 
+// Other (Alphabetocally)
+
+// Default colors
+$color-1: #FFAFBE;
+$color-2: #FFDBB4;
+$color-white: #ffff;
+$color-black: #0000;
+$color-backgroud: #F2F6FF;
+
+/* Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: $color-backgroud;
+    overflow-x: hidden;
+    font-family: "helvetica", san serif;
+    font-size: 62.5%;
+    /* //62.5% of 16px is 10px */
+}
+
+//Header
+.header {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    align-content: center;
+    font-size: 1.0rem;
+}
+
+.header-logo {
+    align-self: center;
+    justify-self: center;
+}
+nav{
+    align-self: center;
+}
+//Menu
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    list-style: none;
+    &-item {
+        margin: 0 60px;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
+.menu-item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background-color: 0000;
+    position: absolute;
+    visibility: hidden;
+    transform-origin: left;
+    transform: scale(0);
+    transition: 0.25s ease-out;
+}
+.menu-item:hover::after {
+    visibility: visible;
+    transform: scale(1);
+  
+}
+
+//HERO SECTION
+.container {
+//    max-width: 1500px;
+    margin: 0 auto;
+}
+.hero-container {
+    position: relative;
+    min-height: 50.5rem;
+    display: grid;
+    // grid-template-areas: 
+    // "img img cta cta"
+    // "img img cta cta";
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, min-max(0px, auto));
+}
+
+.hero-img {
+    // grid-area: img;
+}
+.hero-gradient {
+    overflow: hidden;
+    // justify-self: end;
+    // max-width: 1500px;
+    min-width: 100%;
+    min-height: 100%;
+    // grid-column: 1/5;
+    // align-self: end;
+    // grid-row: 2/2;
+    // z-index: -1100000000000000000000000;
+    // max-width: 1500px;
+}
