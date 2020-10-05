@@ -11,7 +11,7 @@
 $color-1: #FFAFBE;
 $color-2: #FFDBB4;
 $color-white: #ffff;
-$color-black: #0000;
+$color-black: #000;
 $color-backgroud: #F2F6FF;
 
 /* Default Styles */
@@ -19,14 +19,15 @@ $color-backgroud: #F2F6FF;
     margin: 0;
     padding: 0;
     border: 0;
+    box-sizing: border-box;
 }
-
+html {
+    font-size: 62.5%; /* //62.5% of 16px is 10px */
+}
 body {
     background-color: $color-backgroud;
     overflow-x: hidden;
     font-family: "helvetica", san serif;
-    font-size: 62.5%;
-    /* //62.5% of 16px is 10px */
 }
 
 //Header
@@ -77,32 +78,71 @@ nav{
 
 //HERO SECTION
 .container {
-//    max-width: 1500px;
+   max-width: 1500px;
     margin: 0 auto;
 }
-.hero-container {
+.hero_container {
     position: relative;
     min-height: 50.5rem;
     display: grid;
+
     // grid-template-areas: 
     // "img img cta cta"
     // "img img cta cta";
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, min-max(0px, auto));
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, min-max(0px, auto));
+    // grid-template-rows: auto;
 }
 
 .hero-img {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    justify-items: center;
+    align-self: center;
     // grid-area: img;
 }
+.hero-cta {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    justify-self: center;
+    align-self: center;
+
+ 
+}
+
+.cta-title {
+    font-size: 7rem;
+    font-weight: 800;
+    color: $color-white;
+    font-family: "Oswald", san serif;
+    line-height: 8rem;
+    margin-bottom: 2rem;
+}
+.cta-description {
+    font-size: 1.6rem;
+    color: $color-white;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
 .hero-gradient {
-    overflow: hidden;
-    // justify-self: end;
-    // max-width: 1500px;
-    min-width: 100%;
-    min-height: 100%;
-    // grid-column: 1/5;
-    // align-self: end;
-    // grid-row: 2/2;
-    // z-index: -1100000000000000000000000;
-    // max-width: 1500px;
+    // overflow: hidden;
+    width: 1500px;
+        height: 100%;
+    grid-column: 1/5;
+    grid-row: 1/1;
+    justify-items: center;
+    align-self: center;
+}
+
+//Buttons 
+.btn {
+    width: 26.9rem;
+    height: 5rem;
+    color: $color-white;
+    background-color: $color-black;
+    border-radius: 30px;
+    font-size: 2.5rem;
+    font-family: "Oswald", san serif;
+    font-weight: 300;
+    text-transform: uppercase;
 }

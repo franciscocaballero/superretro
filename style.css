@@ -4,14 +4,19 @@
   margin: 0;
   padding: 0;
   border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* //62.5% of 16px is 10px */
 }
 
 body {
   background-color: #F2F6FF;
   overflow-x: hidden;
   font-family: "helvetica", san serif;
-  font-size: 62.5%;
-  /* //62.5% of 16px is 10px */
 }
 
 .header {
@@ -79,23 +84,85 @@ nav {
 }
 
 .container {
+  max-width: 1500px;
   margin: 0 auto;
 }
 
-.hero-container {
+.hero_container {
   position: relative;
   min-height: 50.5rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
-  -ms-grid-rows: (min-max(0px, auto))[2];
-      grid-template-rows: repeat(2, min-max(0px, auto));
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (min-max(0px, auto))[1];
+      grid-template-rows: repeat(1, min-max(0px, auto));
+}
+
+.hero-img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  justify-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.hero-cta {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cta-title {
+  font-size: 7rem;
+  font-weight: 800;
+  color: #ffff;
+  font-family: "Oswald", san serif;
+  line-height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.cta-description {
+  font-size: 1.6rem;
+  color: #ffff;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
 .hero-gradient {
-  overflow: hidden;
-  min-width: 100%;
-  min-height: 100%;
+  width: 1500px;
+  height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  justify-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.btn {
+  width: 26.9rem;
+  height: 5rem;
+  color: #ffff;
+  background-color: #000;
+  border-radius: 30px;
+  font-size: 2.5rem;
+  font-family: "Oswald", san serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
