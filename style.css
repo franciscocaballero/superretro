@@ -164,5 +164,20 @@ nav {
   font-family: "Oswald", san serif;
   font-weight: 300;
   text-transform: uppercase;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  background-color: #2EE59D;
+  -webkit-box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+          box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
 }
 /*# sourceMappingURL=style.css.map */
