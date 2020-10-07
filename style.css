@@ -180,4 +180,60 @@ nav {
   -webkit-transform: translateY(-0.5rem);
           transform: translateY(-0.5rem);
 }
+
+.section-about {
+  position: relative;
+  height: 120rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #FFAFBE;
+  height: 40rem;
+  width: 85rem;
+  border-radius: 3rem;
+}
+
+.card-info-title {
+  font-size: 7rem;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 2rem;
+}
+
+.card-info-paragraph {
+  font-size: 1.6rem;
+  color: #686868;
+  font-weight: 300;
+  text-align: center;
+}
+
+.info-img {
+  height: 30rem;
+  width: 40rem;
+}
 /*# sourceMappingURL=style.css.map */
