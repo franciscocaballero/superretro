@@ -178,9 +178,11 @@ nav {
     grid-gap: 6rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    background-image: url("img/logo-backgroud.png");;
-    // justify-items: center;
-    // align-items: center;
+    background-image: url("img/fb.png");;
+    overflow: hidden;
+    background-size: cover;
+    margin-bottom: 2rem;
+
 }
 
 .card-container {

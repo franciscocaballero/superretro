@@ -192,7 +192,10 @@ nav {
       grid-template-columns: 1fr;
   -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
-  background-image: url("img/logo-backgroud.png");
+  background-image: url("img/fb.png");
+  overflow: hidden;
+  background-size: cover;
+  margin-bottom: 2rem;
 }
 
 .card-container {
