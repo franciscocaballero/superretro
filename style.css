@@ -201,7 +201,8 @@ nav {
   display: flex;
 }
 
-.card-info, .card-info-middle {
+.card-info,
+.card-info-middle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -221,13 +222,15 @@ nav {
   border-radius: 0 3rem 3rem 0;
 }
 
-.card-info-title, .card-info-middle-title {
+.card-info-title,
+.card-info-middle-title {
   font-size: 5rem;
   font-family: "Oswald", sans-serif;
   margin-bottom: 2rem;
 }
 
-.card-info-paragraph, .card-info-middle-paragraph {
+.card-info-paragraph,
+.card-info-middle-paragraph {
   font-size: 1.6rem;
   color: #686868;
   font-weight: 300;
@@ -270,58 +273,84 @@ nav {
   background-size: cover;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 197, 141, 0.9)), to(rgba(255, 178, 188, 0.9))), url("img/ropes.webp");
   background-image: linear-gradient(to bottom, rgba(249, 197, 141, 0.9), rgba(255, 178, 188, 0.9)), url("img/ropes.webp");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
 }
 
 .section-join .join-heading {
   font-size: 7rem;
+  font-weight: 700;
+  font-family: 'Oswald'sans-serif;
   color: #ffff;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700;
-  font-family: 'Oswald' sans-serif;
 }
 
-.section-join p {
+.section-join .join-paragraph {
   font-size: 1.6rem;
-  color: #ffff;
   font-weight: 300;
+  color: #ffff;
   text-align: center;
   line-height: 3rem;
-  width: 40rem;
 }
 
-.join-card-container {
+.join-section-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
 }
 
-.join-card-container .container {
-  height: 55rem;
-  width: 68rem;
-  background-image: url("img/card-2.png");
+.join-section-container .join-card {
+  margin: 0 auto;
+  border-radius: 3rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  justify-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.join-card-container .join-card-bg {
-  height: 117rem;
-  width: 68rem;
+.join-section-container .join-card h2 {
+  color: #FFDBB4;
+}
+
+.join-section-container .join-card-sm {
+  height: 45rem;
+  width: 58rem;
+}
+
+.join-section-container .join-card-sm-1 {
+  background-image: url("img/join-2.webp");
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.join-section-container .join-card-sm-2 {
+  background-image: url("img/join-1.jpg");
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.join-section-container .join-card-bg {
+  height: 90rem;
+  width: 58rem;
+  background-image: url("img/join-3.jpg");
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
 }
 /*# sourceMappingURL=style.css.map */

@@ -189,7 +189,8 @@ nav {
     display: flex;
 }
 
-.card-info,.card-info-middle {
+.card-info,
+.card-info-middle {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,54 +244,74 @@ nav {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to bottom, rgba(249,197,141,.9), rgba(255,178,188,.9)), 
-    url("img/ropes.webp");
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    background-image: linear-gradient(to bottom, rgba(249, 197, 141, .9), rgba(255, 178, 188, .9)),
+        url("img/ropes.webp");
 
-    
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-content: center;
     .join-heading {
-        
         font-size: 7rem;
+        font-weight: 700;
+        font-family: 'Oswald'sans-serif;
         color: $color-white;
         text-align: center;
         text-transform: uppercase;
-        font-weight: 700;
-        font-family: 'Oswald' sans-serif;
     }
-    p{
+
+    .join-paragraph {
         font-size: 1.6rem;
-        color: $color-white;
         font-weight: 300;
+        color: $color-white;
         text-align: center;
         line-height: 3rem;
-        width: 40rem;
-
+        // width: 40rem;
     }
 
 }
-.join-card-container {
+
+.join-section-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-rows: repeat(2, 1fr);
 
-    h2 {
 
-    }
-    .container{
-        height: 55rem;
-        width: 68rem;
-        
-            background-image: url('img/card-2.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
+    .join-card {
+        margin: 0 auto;
+        border-radius: 3rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        justify-items: center;
+        align-self: center;
+        h2{
+            color: $color-2
         }
-    
+    }
+
+    .join-card-sm {
+        height: 45rem;
+        width: 58rem;
+
+        &-1 {
+            background-image: url('img/join-2.webp');
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+
+        &-2 {
+            background-image: url('img/join-1.jpg');
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+
     .join-card-bg {
-        height: 117rem;
-        width: 68rem;
+        height: 90rem;
+        width: 58rem;
+        background-image: url('img/join-3.jpg');
+        grid-column: 2/3;
+        grid-row: 1/3;
     }
 }
