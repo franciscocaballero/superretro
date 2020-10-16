@@ -170,6 +170,14 @@ nav {
     }
 }
 
+.btn-learn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-white;
+    background: none;
+}
+
 .section-about {
     position: relative;
     min-height: 100%;
@@ -240,6 +248,8 @@ nav {
 }
 
 .section-join {
+    margin-top: 4rem;
+    padding-top: 4rem;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -251,10 +261,14 @@ nav {
     // flex-direction: column;
     // justify-content: center;
     // align-content: center;
+
+    .join-text-container{
+        width: 4rem;
+    }
     .join-heading {
         font-size: 7rem;
         font-weight: 700;
-        font-family: 'Oswald'sans-serif;
+        font-family: "Oswald", sans-serif;
         color: $color-white;
         text-align: center;
         text-transform: uppercase;
@@ -262,32 +276,42 @@ nav {
 
     .join-paragraph {
         font-size: 1.6rem;
-        font-weight: 300;
+        font-weight: 200;
         color: $color-white;
         text-align: center;
         line-height: 3rem;
-        // width: 40rem;
+        margin-bottom: 4rem;
     }
 
 }
 
 .join-section-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 58rem);
     grid-template-rows: repeat(2, 1fr);
-
+    grid-gap: 2.5rem;
+    justify-content: center;
 
     .join-card {
-        margin: 0 auto;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+        padding-bottom: 2rem;
+        // align-self: center;
+        // margin: 0 auto;
         border-radius: 3rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        justify-items: center;
-        align-self: center;
         h2{
-            color: $color-2
+            color: $color-white;
+            font-size: 6rem;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            
         }
+        
     }
 
     .join-card-sm {
@@ -295,23 +319,28 @@ nav {
         width: 58rem;
 
         &-1 {
-            background-image: url('img/join-2.webp');
             grid-column: 1/2;
             grid-row: 1/2;
+            background-image: linear-gradient(to bottom, transparent 75%, black 25%),
+            url('img/join-2.webp');
         }
 
         &-2 {
-            background-image: url('img/join-1.jpg');
             grid-column: 1/2;
             grid-row: 2/3;
+            background-image: linear-gradient(to bottom, rgba(249, 197, 141, 0.9)75%, rgba(5, 0, 1, 0.5) 25%),
+            url('img/join-1.jpg');
+
         }
     }
 
     .join-card-bg {
-        height: 90rem;
-        width: 58rem;
-        background-image: url('img/join-3.jpg');
         grid-column: 2/3;
         grid-row: 1/3;
+        height: 95rem;
+        width: 58rem;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(5, 0, 1, 0.9)),
+        url('img/join-3.jpg');
+
     }
 }
