@@ -375,8 +375,19 @@ nav {
     .membership-text-container {
         display: flex;
         flex-direction: row;
-        .membership-heading {
-
-        }
+        
     }
+    .membership-section-container{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3,50rem);
+        justify-content: center;
+        grid-gap: 2.5rem;
+        
+    }
+   .memebership-card {
+       height: 70rem;
+    //    width: 50rem;
+       background-color: red;
+   } 
 }

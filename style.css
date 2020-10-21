@@ -403,4 +403,22 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
 }
+
+.section-membership .membership-section-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-columns: (50rem)[3];
+      grid-template-columns: repeat(3, 50rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 2.5rem;
+}
+
+.section-membership .memebership-card {
+  height: 70rem;
+  background-color: red;
+}
 /*# sourceMappingURL=style.css.map */
