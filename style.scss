@@ -10,6 +10,8 @@
 // Default colors
 $color-1: #FFAFBE;
 $color-2: #FFDBB4;
+$color-3: #FCBBA3;
+$color-4: #F9C48F;
 $color-white: #ffff;
 $color-black: #000;
 $color-grey: #686868;
@@ -380,14 +382,44 @@ nav {
     .membership-section-container{
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: repeat(3,50rem);
+        grid-template-columns: repeat(3,40rem);
         justify-content: center;
         grid-gap: 2.5rem;
         
     }
    .memebership-card {
        height: 70rem;
-    //    width: 50rem;
-       background-color: red;
+       width: 100%;
+       border-radius: 3rem;
+       color: $color-white;
+       display: flex;
+       flex-direction: column;
+    //    text-align: center;
+    //    justify-content: space-between;
+    //    align-content: space-between;
+       justify-content:  center;
+    //    align-content: space-between;
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        li{
+            padding: .5rem;
+            text-decoration: none;
+            list-style: none;
+        }
+    }
+       &-1 {
+           background-color: $color-4;
+       }
+       &-2 {
+           background-color: $color-3;
+       }
+       &-3 {
+           background-color: $color-2;
+       }
    } 
 }

@@ -409,8 +409,8 @@ nav {
   display: grid;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  -ms-grid-columns: (50rem)[3];
-      grid-template-columns: repeat(3, 50rem);
+  -ms-grid-columns: (40rem)[3];
+      grid-template-columns: repeat(3, 40rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -419,6 +419,54 @@ nav {
 
 .section-membership .memebership-card {
   height: 70rem;
-  background-color: red;
+  width: 100%;
+  border-radius: 3rem;
+  color: #ffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section-membership .memebership-card .container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-membership .memebership-card .container li {
+  padding: .5rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+.section-membership .memebership-card-1 {
+  background-color: #F9C48F;
+}
+
+.section-membership .memebership-card-2 {
+  background-color: #FCBBA3;
+}
+
+.section-membership .memebership-card-3 {
+  background-color: #FFDBB4;
 }
 /*# sourceMappingURL=style.css.map */
