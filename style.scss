@@ -21,8 +21,8 @@ $color-backgroud: #F2F6FF;
 * {
     margin: 0;
     padding: 0;
+    box-sizing: 0;
     border: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -37,12 +37,36 @@ body {
 }
 
 
-
+//HEADING
 h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
 }
+
+// PARAGRAPH 
+p,
+.p-white,
+.p-black,
+.p-grey {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.p-white {
+    color: $color-white;
+}
+
+.p-black {
+    color: $color-black;
+}
+
+.p-grey {
+    color: $color-grey;
+}
+
 //Header
 .header {
     display: grid;
@@ -103,13 +127,9 @@ nav {
     position: relative;
     min-height: 50.5rem;
     display: grid;
-
-    // grid-template-areas: 
-    // "img img cta cta"
-    // "img img cta cta";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, min-max(0px, auto));
-    // grid-template-rows: auto;
+
 }
 
 .hero-img {
@@ -179,6 +199,10 @@ nav {
     }
 }
 
+.btn-clear {
+    width: 20rem;
+}
+
 .btn-learn {
     font-family: 'Oswald', sans-serif;
     font-size: 2rem;
@@ -195,11 +219,7 @@ nav {
     grid-gap: 6rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    // background-image: url("img/fb.png");
-    // overflow: hidden;
     background-size: cover;
-    // margin-bottom: 2rem;
-
 }
 
 .card-container {
@@ -233,9 +253,6 @@ nav {
     }
 }
 
-// .card-info-middle{
-
-// }
 .img-wrapper {
     display: flex;
     align-items: center;
@@ -333,24 +350,20 @@ nav {
             grid-column: 1/2;
             grid-row: 1/2;
             background-image:
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0)30%,
-              rgba(5, 0, 1, 1) 
-            ),
-            url('img/join-2.webp');
+                linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0)30%,
+                    rgba(5, 0, 1, 1)),
+                url('img/join-2.webp');
         }
 
         &-2 {
             grid-column: 1/2;
             grid-row: 2/3;
             background-image:
-            linear-gradient(
-              to bottom,
-              rgba(0, 0, 0, 0)30%,
-              rgba(5, 0, 1, 1) 
-            ),
-             url('img/join-1.jpg');
+                linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0)30%,
+                    rgba(5, 0, 1, 1)),
+                url('img/join-1.jpg');
 
         }
     }
@@ -361,11 +374,9 @@ nav {
         height: 95rem;
         width: 58rem;
         background-image:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0)30%,
-            rgba(5, 0, 1, 1) 
-          ),
+            linear-gradient(to bottom,
+                rgba(0, 0, 0, 0)30%,
+                rgba(5, 0, 1, 1)),
             url('img/join-3.jpg');
 
     }
@@ -373,53 +384,64 @@ nav {
 
 .section-membership {
     width: 100%;
-    height: 100%;
+    height: 70%;
+
     .membership-text-container {
         display: flex;
         flex-direction: row;
-        
+        justify-content: space-evenly;
+        margin: 8rem 0 8rem 0;
     }
-    .membership-section-container{
+
+    .membership-section-container {
         display: grid;
         grid-template-rows: 1fr;
-        grid-template-columns: repeat(3,40rem);
+        grid-template-columns: repeat(3, 30rem);
         justify-content: center;
         grid-gap: 2.5rem;
-        
+
     }
-   .memebership-card {
-       height: 70rem;
-       width: 100%;
-       border-radius: 3rem;
-       color: $color-white;
-       display: flex;
-       flex-direction: column;
-    //    text-align: center;
-    //    justify-content: space-between;
-    //    align-content: space-between;
-       justify-content:  center;
-    //    align-content: space-between;
-    .container {
-        height: 100%;
+
+    .memebership-card {
+        height: 50rem;
         width: 100%;
+        border-radius: 3rem;
+        color: $color-white;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        li{
-            padding: .5rem;
-            text-decoration: none;
-            list-style: none;
+        justify-content: center;
+      
+        .container {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            li {
+                padding: .5rem;
+                text-decoration: none;
+                list-style: none;
+            }
+        }
+
+        &-1 {
+            background-color: $color-4;
+  
+        }
+
+        &-2 {
+            background-color: $color-3;
+            height: 55rem;
+        }
+
+        &-3 {
+            background-color: $color-2;
         }
     }
-       &-1 {
-           background-color: $color-4;
-       }
-       &-2 {
-           background-color: $color-3;
-       }
-       &-3 {
-           background-color: $color-2;
-       }
-   } 
+
+    p {
+        text-align: center;
+    }
 }
