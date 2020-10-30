@@ -34,7 +34,10 @@ body {
     background-color: $color-backgroud;
     overflow-x: hidden;
     font-family: "helvetica", san serif;
-    position: relative;
+    height: 100%;
+    // position: relative;
+    background: url('../img/7.svg') no-repeat;
+    background-size: cover;
 
 }
 
@@ -127,11 +130,11 @@ nav {
 
 .hero_container {
     position: relative;
-    min-height: 50.5rem;
+    min-height: 60.5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, min-max(0px, auto));
-
+    padding-bottom: 40rem;
 }
 
 .hero-img {

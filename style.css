@@ -17,7 +17,9 @@ body {
   background-color: #F2F6FF;
   overflow-x: hidden;
   font-family: "helvetica", san serif;
-  position: relative;
+  height: 100%;
+  background: url("../img/7.svg") no-repeat;
+  background-size: cover;
 }
 
 h2 {
@@ -119,13 +121,14 @@ nav {
 
 .hero_container {
   position: relative;
-  min-height: 50.5rem;
+  min-height: 60.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (min-max(0px, auto))[1];
       grid-template-rows: repeat(1, min-max(0px, auto));
+  padding-bottom: 40rem;
 }
 
 .hero-img {
