@@ -112,7 +112,7 @@ nav {
       align-content: center;
   list-style: none;
   color: #ffff;
-  font-family: 'Oswald' sans-serif;
+  font-family: 'Oswald'sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
 }
@@ -168,6 +168,8 @@ nav {
   -ms-grid-rows: (min-max(0px, auto))[1];
       grid-template-rows: repeat(1, min-max(0px, auto));
   padding: 10rem 0 40rem 0;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .hero-img {
@@ -302,7 +304,7 @@ nav {
   background-color: #FFAFBE;
   height: 55rem;
   width: 85rem;
-  border-radius: 0 3rem 3rem 0;
+  border-radius: 3rem 3rem 3rem 3rem;
 }
 
 .card-info-title,
@@ -549,13 +551,14 @@ nav {
 }
 
 footer {
+  height: 100%;
   width: 100%;
   position: relative;
-  min-height: 50.5rem;
+  background: url("../img/615.svg") repeat-x;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (80rem)[2];
+      grid-template-columns: repeat(2, 80rem);
   -ms-grid-rows: (min-max(0px, auto))[1];
       grid-template-rows: repeat(1, min-max(0px, auto));
   -webkit-box-pack: center;
@@ -576,7 +579,7 @@ footer form {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 100%;
+  width: 95%;
   height: 100%;
 }
 
@@ -608,16 +611,6 @@ footer form textarea {
   grid-row: 1/2;
 }
 
-.footer-gradient {
-  position: absolute;
-  top: 0;
-  right: -700px;
-  width: 180%;
-  height: 180%;
-  z-index: -1;
-  overflow: hidden;
-}
-
 @-webkit-keyframes wave {
   0% {
     margin-left: 0;
@@ -637,7 +630,8 @@ footer form textarea {
 }
 
 @-webkit-keyframes swell {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate3d(0, -25px, 0);
             transform: translate3d(0, -25px, 0);
   }
@@ -648,7 +642,8 @@ footer form textarea {
 }
 
 @keyframes swell {
-  0%, 100% {
+  0%,
+  100% {
     -webkit-transform: translate3d(0, -25px, 0);
             transform: translate3d(0, -25px, 0);
   }
