@@ -15,6 +15,7 @@ $color-4: #F9C48F;
 $color-white: #ffff;
 $color-black: #000;
 $color-grey: #686868;
+$color-grey-light: #9B9898;
 $color-backgroud: #F2F6FF;
 
 /* Default Styles */
@@ -31,13 +32,11 @@ html {
 }
 
 body {
-    background-color: $color-backgroud;
-    overflow-x: hidden;
-    font-family: "helvetica", san serif;
     height: 100%;
     width: 100%;
-    // position: absolute;
-
+    overflow-x: hidden;
+    font-family: "helvetica", san serif;
+    background-color: $color-backgroud;
 }
 
 .ocean {
@@ -50,18 +49,17 @@ body {
 }
 
 .wave {
-    background: url('../img/28.svg') repeat-x;
-    position: absolute;
-    top: -198px;
     width: 6400px;
     height: 198px;
+    position: absolute;
+    top: -198px;
+    background: url('../img/wave.svg') repeat-x;
     animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0);
 
 }
 
 .wave:nth-of-type(2) {
-    // top: -175px;
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
     opacity: 1;
 }
@@ -101,8 +99,8 @@ p,
     display: grid;
     grid-template-columns: 20% 1fr;
     align-content: center;
-    font-size: 1.0rem;
     padding-top: 2rem;
+    font-size: 1.0rem;
 }
 
 .header-logo {
@@ -119,11 +117,11 @@ nav {
     display: flex;
     justify-content: flex-end;
     align-content: center;
-    list-style: none;
-    color: $color-white;
     font-family: 'Oswald'sans-serif;
-    text-transform: uppercase;
     font-size: 2rem;
+    color: $color-white;
+    list-style: none;
+    text-transform: uppercase;
 
     &-item {
         margin: 0 60px;
@@ -134,7 +132,6 @@ nav {
 
 .menu-item::after {
     content: '';
-    display: block;
     width: 100%;
     height: 0.3rem;
     background-color: 0000;
@@ -158,23 +155,20 @@ nav {
 }
 
 .hero {
-    // position: relative;
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom, $color-4, $color-1);
 }
 
 .hero_container {
-    position: relative;
+    max-width: 1500px;
     min-height: 60.5rem;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, min-max(0px, auto));
-    padding: 10rem 0 40rem 0;
-    max-width: 1500px;
     margin: 0 auto;
-
-
+    padding: 10rem 0 40rem 0;
 }
 
 .hero-img {
@@ -182,7 +176,6 @@ nav {
     grid-row: 1/1;
     justify-items: center;
     align-self: center;
-    // grid-area: img;
 }
 
 .hero-cta {
@@ -190,28 +183,25 @@ nav {
     grid-row: 1/1;
     justify-self: center;
     align-self: center;
-
-
 }
 
 .cta-title {
+    margin-bottom: 2rem;
+    font-family: "Oswald", san serif;
     font-size: 7rem;
     font-weight: 800;
     color: $color-white;
-    font-family: "Oswald", san serif;
     line-height: 8rem;
-    margin-bottom: 2rem;
 }
 
 .cta-description {
-    font-size: 1.6rem;
-    color: $color-white;
-    font-weight: 300;
     margin-bottom: 2rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: $color-white;
 }
 
 .hero-gradient {
-    // overflow: hidden;
     width: 1500px;
     height: 100%;
     grid-column: 1/5;
@@ -224,12 +214,12 @@ nav {
 .btn {
     width: 26.9rem;
     height: 5rem;
-    color: $color-white;
-    background-color: $color-black;
-    border-radius: 30px;
     font-size: 2.5rem;
     font-family: "Oswald", san serif;
     font-weight: 300;
+    color: $color-white;
+    background-color: $color-black;
+    border-radius: 30px;
     text-transform: uppercase;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
@@ -257,10 +247,10 @@ nav {
 }
 
 .section-about {
-    position: relative;
-    min-height: 100%;
     width: 100%;
+    min-height: 100%;
     display: grid;
+    position: relative;
     grid-gap: 6rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -273,13 +263,13 @@ nav {
 
 .card-info,
 .card-info-middle {
+    width: 85rem;
+    height: 55rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $color-1;
-    height: 55rem;
-    width: 85rem;
     border-radius: 3rem 3rem 3rem 3rem;
 
     &-title {
@@ -289,12 +279,12 @@ nav {
     }
 
     &-paragraph {
+        width: 40rem;
         font-size: 1.6rem;
-        color: $color-grey;
         font-weight: 300;
         text-align: center;
+        color: $color-grey;
         line-height: 3rem;
-        width: 40rem;
     }
 }
 
@@ -319,19 +309,14 @@ nav {
 }
 
 .section-join {
-    margin-top: 4rem;
-    padding-top: 4rem;
     width: 100%;
     height: 100%;
+    margin-top: 4rem;
+    padding-top: 4rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(to bottom, rgba(249, 197, 141, .9), rgba(255, 178, 188, .9)),
         url("img/ropes.webp");
-
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-content: center;
 
     .join-text-container {
         width: 4rem;
@@ -347,12 +332,12 @@ nav {
     }
 
     .join-paragraph {
+        margin-bottom: 4rem;
         font-size: 1.6rem;
         font-weight: 200;
         color: $color-white;
         text-align: center;
         line-height: 3rem;
-        margin-bottom: 4rem;
     }
 
 }
@@ -369,18 +354,16 @@ nav {
         align-items: flex-end;
         text-align: center;
         padding-bottom: 2rem;
-        // align-self: center;
-        // margin: 0 auto;
         border-radius: 3rem;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
         h2 {
-            color: $color-white;
             font-size: 6rem;
             font-family: 'Oswald', sans-serif;
             font-weight: 300;
+            color: $color-white;
             text-transform: uppercase;
 
         }
@@ -414,10 +397,10 @@ nav {
     }
 
     .join-card-bg {
-        grid-column: 2/3;
-        grid-row: 1/3;
         height: 95rem;
         width: 58rem;
+        grid-column: 2/3;
+        grid-row: 1/3;
         background-image:
             linear-gradient(to bottom,
                 rgba(0, 0, 0, 0)30%,
@@ -450,11 +433,11 @@ nav {
     .memebership-card {
         height: 50rem;
         width: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
         border-radius: 3rem;
         color: $color-white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         .container {
             height: 50%;
@@ -477,8 +460,8 @@ nav {
         }
 
         &-2 {
-            background-color: $color-3;
             height: 55rem;
+            background-color: $color-3;
         }
 
         &-3 {
@@ -492,34 +475,46 @@ nav {
 }
 
 footer {
-    // width: 100%;
-    height: 100%;
+    height: 90%;
     width: 100%;
-    position: relative;
-    // min-height: 50.5rem;
-    // background-color: red;
-    background: url('../img/615.svg') repeat-x;
     display: grid;
     grid-template-columns: repeat(2, 80rem);
     grid-template-rows: repeat(1, min-max(0px, auto));
+    align-content: end;
+    position: relative;
     justify-content: center;
-    align-content: center;
+    background: url('../img/615.svg') repeat-x;
 
     form {
+        width: 95%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        width: 95%;
-        height: 100%;
 
-        input {
+        .form-input{
             border-radius: 3rem;
             height: 6rem;
+            padding-left: 3rem;
+            font-size: 2.5rem;
+            font-family: "Oswald", sans-serif;
+            color: $color-grey-light;
+            outline: none;
+
+            &::placeholder {
+                color: $color-grey-light;
+            }
         }
 
         textarea {
-            border-radius: 3rem;
             height: 12rem;
+            padding: 3rem;
+            font-family: "Oswald", sans-serif;
+            font-size: 2.5rem;
+            color: $color-grey-light;
+            border-radius: 3rem;
+            outline: none;
+            resize: none;
         }
     }
 }
@@ -533,25 +528,6 @@ footer {
     grid-column: 2/3;
     grid-row: 1/2;
 }
-
-// .gradient-container {
-//     height: 90%;
-//     width: 100%;
-//     margin: 0 auto;
-// }
-
-// .footer-gradient {
-//     background: url('../img/611.svg') repeat-x;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 1600px;
-//     height: 800px;
-//     z-index: -1;
-//     overflow: hidden;
-//     margin: 0 auto;
-
-// }
 
 
 //Animations
@@ -567,12 +543,30 @@ footer {
 
 @keyframes swell {
 
-    0%,
-    100% {
-        transform: translate3d(0, -25px, 0);
-    }
 
     50% {
         transform: translate3d(0, 5px, 0);
     }
+    100% {
+        transform: translate3d(0, -25px, 0);
+    }
+
 }
+
+//MEDIA QUERIES
+
+
+/* ----------- Laptops ----------- */
+@media (max-width: 1200px){
+
+}
+
+/* ----------- Tablets ----------- */
+@media (max-width: 900px){
+
+}
+/* ----------- Phones ----------- */
+@media (max-width: 500px){
+
+}
+

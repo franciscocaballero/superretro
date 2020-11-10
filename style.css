@@ -14,11 +14,11 @@ html {
 }
 
 body {
-  background-color: #F2F6FF;
-  overflow-x: hidden;
-  font-family: "helvetica", san serif;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
+  font-family: "helvetica", san serif;
+  background-color: #F2F6FF;
 }
 
 .ocean {
@@ -31,11 +31,11 @@ body {
 }
 
 .wave {
-  background: url("../img/28.svg") repeat-x;
-  position: absolute;
-  top: -198px;
   width: 6400px;
   height: 198px;
+  position: absolute;
+  top: -198px;
+  background: url("../img/wave.svg") repeat-x;
   -webkit-animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
           animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
   -webkit-transform: translate3d(0, 0, 0);
@@ -83,8 +83,8 @@ p,
       grid-template-columns: 20% 1fr;
   -ms-flex-line-pack: center;
       align-content: center;
-  font-size: 1.0rem;
   padding-top: 2rem;
+  font-size: 1.0rem;
 }
 
 .header-logo {
@@ -110,11 +110,11 @@ nav {
           justify-content: flex-end;
   -ms-flex-line-pack: center;
       align-content: center;
-  list-style: none;
-  color: #ffff;
   font-family: 'Oswald'sans-serif;
-  text-transform: uppercase;
   font-size: 2rem;
+  color: #ffff;
+  list-style: none;
+  text-transform: uppercase;
 }
 
 .menu-item {
@@ -125,7 +125,6 @@ nav {
 
 .menu-item::after {
   content: '';
-  display: block;
   width: 100%;
   height: 0.3rem;
   background-color: 0000;
@@ -159,17 +158,17 @@ nav {
 }
 
 .hero_container {
-  position: relative;
+  max-width: 1500px;
   min-height: 60.5rem;
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (min-max(0px, auto))[1];
       grid-template-rows: repeat(1, min-max(0px, auto));
-  padding: 10rem 0 40rem 0;
-  max-width: 1500px;
   margin: 0 auto;
+  padding: 10rem 0 40rem 0;
 }
 
 .hero-img {
@@ -198,19 +197,19 @@ nav {
 }
 
 .cta-title {
+  margin-bottom: 2rem;
+  font-family: "Oswald", san serif;
   font-size: 7rem;
   font-weight: 800;
   color: #ffff;
-  font-family: "Oswald", san serif;
   line-height: 8rem;
-  margin-bottom: 2rem;
 }
 
 .cta-description {
-  font-size: 1.6rem;
-  color: #ffff;
-  font-weight: 300;
   margin-bottom: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #ffff;
 }
 
 .hero-gradient {
@@ -230,12 +229,12 @@ nav {
 .btn {
   width: 26.9rem;
   height: 5rem;
-  color: #ffff;
-  background-color: #000;
-  border-radius: 30px;
   font-size: 2.5rem;
   font-family: "Oswald", san serif;
   font-weight: 300;
+  color: #ffff;
+  background-color: #000;
+  border-radius: 30px;
   text-transform: uppercase;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -267,11 +266,11 @@ nav {
 }
 
 .section-about {
-  position: relative;
-  min-height: 100%;
   width: 100%;
+  min-height: 100%;
   display: -ms-grid;
   display: grid;
+  position: relative;
   grid-gap: 6rem;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
@@ -288,6 +287,8 @@ nav {
 
 .card-info,
 .card-info-middle {
+  width: 85rem;
+  height: 55rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,8 +303,6 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   background-color: #FFAFBE;
-  height: 55rem;
-  width: 85rem;
   border-radius: 3rem 3rem 3rem 3rem;
 }
 
@@ -316,12 +315,12 @@ nav {
 
 .card-info-paragraph,
 .card-info-middle-paragraph {
+  width: 40rem;
   font-size: 1.6rem;
-  color: #686868;
   font-weight: 300;
   text-align: center;
+  color: #686868;
   line-height: 3rem;
-  width: 40rem;
 }
 
 .img-wrapper {
@@ -352,10 +351,10 @@ nav {
 }
 
 .section-join {
-  margin-top: 4rem;
-  padding-top: 4rem;
   width: 100%;
   height: 100%;
+  margin-top: 4rem;
+  padding-top: 4rem;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 197, 141, 0.9)), to(rgba(255, 178, 188, 0.9))), url("img/ropes.webp");
@@ -376,12 +375,12 @@ nav {
 }
 
 .section-join .join-paragraph {
+  margin-bottom: 4rem;
   font-size: 1.6rem;
   font-weight: 200;
   color: #ffff;
   text-align: center;
   line-height: 3rem;
-  margin-bottom: 4rem;
 }
 
 .join-section-container {
@@ -413,10 +412,10 @@ nav {
 }
 
 .join-section-container .join-card h2 {
-  color: #ffff;
   font-size: 6rem;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
+  color: #ffff;
   text-transform: uppercase;
 }
 
@@ -448,14 +447,14 @@ nav {
 }
 
 .join-section-container .join-card-bg {
+  height: 95rem;
+  width: 58rem;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
-  height: 95rem;
-  width: 58rem;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, rgba(0, 0, 0, 0)), to(#050001)), url("img/join-3.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 30%, #050001), url("img/join-3.jpg");
 }
@@ -495,18 +494,18 @@ nav {
 .section-membership .memebership-card {
   height: 50rem;
   width: 100%;
-  border-radius: 3rem;
-  color: #ffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 3rem;
+  color: #ffff;
 }
 
 .section-membership .memebership-card .container {
@@ -538,8 +537,8 @@ nav {
 }
 
 .section-membership .memebership-card-2 {
-  background-color: #FCBBA3;
   height: 55rem;
+  background-color: #FCBBA3;
 }
 
 .section-membership .memebership-card-3 {
@@ -551,24 +550,26 @@ nav {
 }
 
 footer {
-  height: 100%;
+  height: 90%;
   width: 100%;
-  position: relative;
-  background: url("../img/615.svg") repeat-x;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (80rem)[2];
       grid-template-columns: repeat(2, 80rem);
   -ms-grid-rows: (min-max(0px, auto))[1];
       grid-template-rows: repeat(1, min-max(0px, auto));
+  -ms-flex-line-pack: end;
+      align-content: end;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  background: url("../img/615.svg") repeat-x;
 }
 
 footer form {
+  width: 95%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -579,18 +580,43 @@ footer form {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 95%;
-  height: 100%;
 }
 
-footer form input {
+footer form .form-input {
   border-radius: 3rem;
   height: 6rem;
+  padding-left: 3rem;
+  font-size: 2.5rem;
+  font-family: "Oswald", sans-serif;
+  color: #9B9898;
+  outline: none;
+}
+
+footer form .form-input::-webkit-input-placeholder {
+  color: #9B9898;
+}
+
+footer form .form-input:-ms-input-placeholder {
+  color: #9B9898;
+}
+
+footer form .form-input::-ms-input-placeholder {
+  color: #9B9898;
+}
+
+footer form .form-input::placeholder {
+  color: #9B9898;
 }
 
 footer form textarea {
-  border-radius: 3rem;
   height: 12rem;
+  padding: 3rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  color: #9B9898;
+  border-radius: 3rem;
+  outline: none;
+  resize: none;
 }
 
 .footer_form {
@@ -630,26 +656,28 @@ footer form textarea {
 }
 
 @-webkit-keyframes swell {
-  0%,
-  100% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
-  }
   50% {
     -webkit-transform: translate3d(0, 5px, 0);
             transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+            transform: translate3d(0, -25px, 0);
   }
 }
 
 @keyframes swell {
-  0%,
-  100% {
-    -webkit-transform: translate3d(0, -25px, 0);
-            transform: translate3d(0, -25px, 0);
-  }
   50% {
     -webkit-transform: translate3d(0, 5px, 0);
             transform: translate3d(0, 5px, 0);
   }
+  100% {
+    -webkit-transform: translate3d(0, -25px, 0);
+            transform: translate3d(0, -25px, 0);
+  }
 }
+
+/* ----------- Laptops ----------- */
+/* ----------- Tablets ----------- */
+/* ----------- Phones ----------- */
 /*# sourceMappingURL=style.css.map */
